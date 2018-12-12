@@ -19,8 +19,9 @@ router.get('/', function (req, res, next) {
                         type: "GET"
                     }
 
-                })
+                });
             }
+
         }).catch(err => {
             res.status(500).json({
                 error: err
@@ -35,7 +36,7 @@ router.post('/', function (req, res, next) {
       ci : req.body.ci,
       saldo : req.body.saldo,
       fechaderegistro : req.body.fechaderegistro,
-    }
+    };
 
     let data = new cliente(clienteData);
 

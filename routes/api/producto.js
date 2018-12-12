@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
             if (docs.length == 0) {
                 res.json({
                     message: "NO hay productos en la BD"
-                })
+                });
             } else {
                 res.json({
                     count: docs.length,
@@ -21,6 +21,7 @@ router.get('/', function (req, res, next) {
 
                 })
             }
+
         }).catch(err => {
             res.status(500).json({
                 error: err
@@ -36,7 +37,7 @@ router.post('/', function (req, res, next) {
       precio: req.body.precio,
       stock : req.body.stock,
 
-    }
+    };
 
     let data = new producto(productoData);
 

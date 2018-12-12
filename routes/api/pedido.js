@@ -19,8 +19,9 @@ router.get('/', function (req, res, next) {
                         type: "GET"
                     }
 
-                })
+                });
             }
+
         }).catch(err => {
             res.status(500).json({
                 error: err
@@ -40,7 +41,7 @@ router.post('/', function (req, res, next) {
       productos : req.body.productos,
 
 
-    }
+    };
 
     let data = new pedido(pedidoData);
 

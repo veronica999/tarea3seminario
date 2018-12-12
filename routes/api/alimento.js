@@ -19,8 +19,9 @@ router.get('/', function (req, res, next) {
                         type: "GET"
                     }
 
-                })
+                });
             }
+
         }).catch(err => {
             res.status(500).json({
                 error: err
@@ -38,7 +39,7 @@ router.post('/', function (req, res, next) {
       grasaa : req.body.grasaa,
       fibra : req.body.fibra,
 
-    }
+    };
 
     let data = new alimento(alimentoData);
 
